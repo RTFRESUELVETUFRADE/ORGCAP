@@ -68,12 +68,10 @@ export function SiteFooter() {
               </a>
             </li>
             <li>
-              <a href={`tel:${site.phone.replace(/\s+/g, "")}`} className="hover:text-amber-400">
-                {site.phone}
+              <a href={site.instagram} target="_blank" rel="noreferrer" className="hover:text-amber-400">
+                {site.instagramHandle}
               </a>
             </li>
-            <li className="text-cream-50/60">{site.address}</li>
-            <li className="text-cream-50/60">{site.hours}</li>
           </ul>
         </div>
       </Container>

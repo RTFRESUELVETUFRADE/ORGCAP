@@ -49,20 +49,6 @@ export default function ContactoPage() {
                 </a>
               </li>
               <li>
-                <span className="block text-cream-50/50">Teléfono</span>
-                <a href={`tel:${site.phone.replace(/\s+/g, "")}`} className="font-medium hover:text-amber-400">
-                  {site.phone}
-                </a>
-              </li>
-              <li>
-                <span className="block text-cream-50/50">Dirección</span>
-                <span className="font-medium">{site.address}</span>
-              </li>
-              <li>
-                <span className="block text-cream-50/50">Horario</span>
-                <span className="font-medium">{site.hours}</span>
-              </li>
-              <li>
                 <span className="block text-cream-50/50">Instagram</span>
                 <a
                   href={site.instagram}
