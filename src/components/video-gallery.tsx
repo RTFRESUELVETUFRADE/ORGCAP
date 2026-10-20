@@ -16,7 +16,7 @@ export function VideoGallery() {
             key={video.id}
             type="button"
             onClick={() => setActiveId(video.id)}
-            className="group relative aspect-video overflow-hidden rounded-2xl bg-navy-950 text-left shadow-sm ring-1 ring-navy-900/5"
+            className="group relative aspect-video overflow-hidden rounded-2xl bg-blue-950 text-left shadow-sm ring-1 ring-white/10"
           >
             <Image
               src={`https://i.ytimg.com/vi/${video.id}/hqdefault.jpg`}
@@ -26,15 +26,15 @@ export function VideoGallery() {
               className="object-cover opacity-90 transition-transform duration-500 group-hover:scale-105"
               unoptimized
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-navy-950/90 via-navy-950/10 to-navy-950/0" />
+            <div className="absolute inset-0 bg-gradient-to-t from-blue-950/90 via-blue-950/10 to-blue-950/0" />
             <span className="absolute inset-0 flex items-center justify-center">
-              <span className="flex h-14 w-14 items-center justify-center rounded-full bg-amber-500/95 text-navy-950 shadow-lg transition-transform group-hover:scale-110">
+              <span className="flex h-14 w-14 items-center justify-center rounded-full bg-white text-blue-700 shadow-lg transition-transform group-hover:scale-110">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
                   <path d="M8 5v14l11-7z" />
                 </svg>
               </span>
             </span>
-            <span className="absolute inset-x-0 bottom-0 p-4 text-sm font-semibold leading-snug text-cream-50">
+            <span className="absolute inset-x-0 bottom-0 p-4 text-sm font-semibold leading-snug text-white">
               {video.title}
             </span>
           </button>
@@ -43,7 +43,7 @@ export function VideoGallery() {
 
       {active && (
         <div
-          className="fixed inset-0 z-[100] flex items-center justify-center bg-navy-950/90 p-4 backdrop-blur-sm"
+          className="fixed inset-0 z-[100] flex items-center justify-center bg-blue-950/90 p-4 backdrop-blur-sm"
           role="dialog"
           aria-modal="true"
           aria-label={active.title}

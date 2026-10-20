@@ -34,17 +34,17 @@ export default async function BlogPostPage(props: PageProps<"/blog/[slug]">) {
     <>
       <article className="py-16 sm:py-20">
         <Container className="max-w-3xl">
-          <Link href="/blog" className="text-sm font-semibold text-navy-900/60 hover:text-amber-600">
+          <Link href="/blog" className="text-sm font-semibold text-slate-500 hover:text-blue-600">
             ← Volver al blog
           </Link>
-          <time dateTime={post.date} className="mt-6 block text-xs font-semibold uppercase tracking-wide text-amber-600">
-            {dateFormatter.format(new Date(post.date))}
-          </time>
-          <h1 className="mt-3 font-serif text-3xl leading-tight tracking-tight text-navy-950 sm:text-4xl">
+          <h1 className="mt-6 text-3xl font-semibold leading-tight tracking-tight text-blue-950 sm:text-4xl">
             {post.title}
           </h1>
+          <time dateTime={post.date} className="mt-2 block text-sm font-medium text-slate-500">
+            {dateFormatter.format(new Date(post.date))}
+          </time>
 
-          <div className="relative mt-8 aspect-[16/9] overflow-hidden rounded-[1.75rem]">
+          <div className="relative mt-8 aspect-[16/9] overflow-hidden rounded-2xl">
             <Image
               src={post.image}
               alt=""
@@ -57,7 +57,7 @@ export default async function BlogPostPage(props: PageProps<"/blog/[slug]">) {
 
           <div className="prose-custom mt-10 space-y-5">
             {post.body.map((paragraph, i) => (
-              <p key={i} className="text-base leading-relaxed text-navy-900/80">
+              <p key={i} className="text-base leading-relaxed text-slate-700">
                 {paragraph}
               </p>
             ))}
@@ -66,15 +66,15 @@ export default async function BlogPostPage(props: PageProps<"/blog/[slug]">) {
       </article>
 
       {related.length > 0 && (
-        <section className="bg-navy-50/60 py-16">
+        <section className="bg-slate-50 py-16">
           <Container className="max-w-3xl">
-            <h2 className="font-serif text-xl text-navy-950">También te puede interesar</h2>
+            <h2 className="text-xl font-semibold text-blue-950">También te puede interesar</h2>
             <div className="mt-6 grid gap-4 sm:grid-cols-2">
               {related.map((p) => (
                 <Link
                   key={p.slug}
                   href={`/blog/${p.slug}`}
-                  className="rounded-2xl bg-cream-50 p-5 text-sm font-medium text-navy-900 ring-1 ring-navy-900/5 hover:text-amber-600"
+                  className="rounded-2xl bg-white p-5 text-sm font-medium text-blue-950 ring-1 ring-slate-200 hover:text-blue-600"
                 >
                   {p.title}
                 </Link>

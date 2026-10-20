@@ -5,10 +5,37 @@ export const site = {
   description:
     "OTEC chilena especializada en educación, empresas y minería. Diseñamos capacitaciones a la medida de cada equipo, con foco en el bienestar y el desempeño real de las personas.",
   url: "https://www.orgcap.cl",
-  email: "contacto@orgcap.cl",
+  email: "orgcap@orgcap.cl",
+  phone: "+56 9 8218 6901",
+  address: "Av. Kennedy 6800, of. 318, Vitacura, Santiago, Chile",
   instagram: "https://www.instagram.com/orgcapcl",
   instagramHandle: "@orgcapcl",
+  facebook: "https://www.facebook.com/ORGCAPOTEC",
+  facebookHandle: "ORGCAP OTEC",
   youtube: "https://www.youtube.com/@ORGCAP",
+};
+
+export const hero = {
+  headline: "Gestión de las emociones con perspectiva neurocientífica",
+  lead: "Diseñamos e implementamos esta jornada para el Servicio Médico Legal de Chile, adjudicada por licitación pública. Es el mismo método con el que trabajamos educación, empresas y minería: levantar la necesidad real de cada equipo antes de diseñar la capacitación.",
+  cta: "Conoce el caso completo",
+  ctaHref: "/blog/jornadas-sml-gestion-emocional",
+  secondaryCta: "Habla con nosotros",
+  secondaryHref: "/contacto",
+  bannerLines: [
+    "Soluciones de capacitación formadas y estructuradas a la medida.",
+    "Transformamos tu organización desde las personas que la hacen funcionar.",
+  ],
+};
+
+export const distinguishing = {
+  title: "Qué distingue a ORGCAP",
+  body: "ORGCAP es un actor estratégico en capacitación, consultoría y desarrollo humano que conecta mundos clave del país: la educación, la minería y las corporaciones. En el medio chileno, se distingue por ser un puente entre personas, organizaciones y contextos productivos, que hace posible que Chile avance no solo en eficiencia, sino también en calidad humana.",
+  points: [
+    "Mirada transversal: adapta su propuesta a educación, empresas y minería, reconociendo las diferencias de cada sector.",
+    "Integra competencias técnicas y humanas: comunicación, liderazgo, autocuidado y gestión emocional.",
+    "Experiencia en contratación pública: el proyecto para el Servicio Médico Legal, adjudicado por licitación, es el antecedente más sólido documentado en su historial.",
+  ],
 };
 
 export const nav = [
@@ -107,6 +134,24 @@ export const values: Value[] = [
   },
 ];
 
+export const homeValues: Value[] = [
+  {
+    title: "Excelencia educativa",
+    description:
+      "Promovemos aprendizajes significativos que trascienden el aula, transformando el conocimiento en herramientas prácticas de crecimiento personal y profesional.",
+  },
+  {
+    title: "Liderazgo empresarial",
+    description:
+      "Acompañamos a compañías y ejecutivos en el desarrollo de habilidades estratégicas que generan competitividad, innovación y capacidad de adaptación en entornos cambiantes.",
+  },
+  {
+    title: "Bienestar y seguridad minera",
+    description:
+      "Impulsamos capacitaciones que fortalecen la prevención de riesgos y la eficiencia operativa, cuidando también la salud física, la estabilidad emocional y el impacto en las familias.",
+  },
+];
+
 export const methodologies = [
   "Comunicación Neuroefectiva",
   "Gestión neuroemocional del estrés y autorregulación",
@@ -185,22 +230,6 @@ export const team: TeamMember[] = [
   },
 ];
 
-export const smlCaseStudy = {
-  title: "Gestión de las emociones con perspectiva neurocientífica",
-  client: "Servicio Médico Legal (SML) — área de Tanatología",
-  summary:
-    "El proyecto más claramente documentado en nuestra historia: una capacitación adjudicada mediante licitación pública para desarrollar habilidades de autorregulación emocional y resiliencia en funcionarios y funcionarias que enfrentan una alta carga emocional en su trabajo diario.",
-  details: [
-    "Jornadas presenciales en Santiago y Talca, además de sesiones de alcance nacional por Zoom.",
-    "Contenidos de neurociencia aplicada, Comunicación Neuroefectiva, coaching ontológico y PNL.",
-    "Técnicas de respiración, mindfulness, anclajes y reestructuración cognitiva.",
-    "Cierre con un plan de acción de bienestar emocional aplicable al trabajo cotidiano.",
-  ],
-  objective:
-    "Desarrollar habilidades de autorregulación emocional y resiliencia basadas en la neurociencia y la Biomentoría Neuroemocional, para enfrentar la carga emocional inherente a la labor del SML y fortalecer el bienestar individual y colectivo.",
-  note: "No incluimos cifras de participantes ni indicadores de impacto: no están documentados y preferimos no inventarlos.",
-  image: "/images/sml/sml-portada-jornada.jpg",
-};
 
 export const ppdu = {
   title: "Proyección internacional: alianza con PPDU",

@@ -15,11 +15,10 @@ export default function BlogPage() {
   return (
     <section className="py-16 sm:py-20">
       <Container>
-        <span className="text-sm font-semibold uppercase tracking-wide text-amber-600">Blog</span>
-        <h1 className="mt-3 font-serif text-4xl leading-tight tracking-tight text-navy-950 sm:text-5xl">
+        <h1 className="text-4xl font-semibold leading-tight tracking-tight text-blue-950 sm:text-5xl">
           Notas desde nuestras jornadas
         </h1>
-        <p className="mt-5 max-w-2xl text-lg leading-relaxed text-navy-900/70">
+        <p className="mt-5 max-w-2xl text-lg leading-relaxed text-slate-600">
           Reflexiones y casos reales sobre capacitación, bienestar emocional y liderazgo en
           educación, empresas y minería.
         </p>
@@ -29,7 +28,7 @@ export default function BlogPage() {
             <Link
               key={post.slug}
               href={`/blog/${post.slug}`}
-              className="group flex flex-col overflow-hidden rounded-[1.75rem] bg-cream-50 shadow-sm ring-1 ring-navy-900/5 transition-shadow hover:shadow-lg"
+              className="group flex flex-col overflow-hidden rounded-2xl bg-white shadow-sm ring-1 ring-slate-200 transition-shadow hover:shadow-lg"
             >
               <div className="relative h-48 w-full overflow-hidden">
                 <Image
@@ -41,12 +40,12 @@ export default function BlogPage() {
                 />
               </div>
               <div className="flex flex-1 flex-col p-6">
-                <time dateTime={post.date} className="text-xs font-semibold uppercase tracking-wide text-amber-600">
+                <h2 className="text-lg font-semibold leading-snug text-blue-950">{post.title}</h2>
+                <time dateTime={post.date} className="mt-1.5 block text-xs font-medium text-slate-400">
                   {dateFormatter.format(new Date(post.date))}
                 </time>
-                <h2 className="mt-2 font-serif text-lg leading-snug text-navy-950">{post.title}</h2>
-                <p className="mt-3 flex-1 text-sm leading-relaxed text-navy-900/65">{post.excerpt}</p>
-                <span className="mt-4 text-sm font-semibold text-navy-900 group-hover:text-amber-600">
+                <p className="mt-3 flex-1 text-sm leading-relaxed text-slate-600">{post.excerpt}</p>
+                <span className="mt-4 text-sm font-semibold text-blue-700 group-hover:text-blue-600">
                   Leer nota →
                 </span>
               </div>

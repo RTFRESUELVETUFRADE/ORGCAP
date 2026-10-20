@@ -7,7 +7,7 @@ export function TeamGrid({ full = false }: { full?: boolean }) {
       {team.map((person) => (
         <div
           key={person.slug}
-          className="flex flex-col overflow-hidden rounded-[1.75rem] bg-cream-50 shadow-sm ring-1 ring-navy-900/5"
+          className="flex flex-col overflow-hidden rounded-2xl bg-white shadow-sm ring-1 ring-slate-200"
         >
           <div className="relative aspect-[4/5] w-full">
             <Image
@@ -19,13 +19,13 @@ export function TeamGrid({ full = false }: { full?: boolean }) {
             />
           </div>
           <div className="p-6">
-            <h3 className="font-serif text-xl text-navy-950">{person.name}</h3>
-            <p className="mt-1 text-sm font-semibold text-amber-600">{person.role}</p>
-            <p className="mt-3 text-sm leading-relaxed text-navy-900/70">{person.summary}</p>
+            <h3 className="text-xl font-semibold text-blue-950">{person.name}</h3>
+            <p className="mt-1 text-sm font-semibold text-blue-600">{person.role}</p>
+            <p className="mt-3 text-sm leading-relaxed text-slate-600">{person.summary}</p>
             {full && (
-              <div className="mt-4 space-y-3 border-t border-navy-900/10 pt-4">
+              <div className="mt-4 space-y-3 border-t border-slate-200 pt-4">
                 {person.bio.map((paragraph, i) => (
-                  <p key={i} className="text-sm leading-relaxed text-navy-900/65">
+                  <p key={i} className="text-sm leading-relaxed text-slate-600">
                     {paragraph}
                   </p>
                 ))}

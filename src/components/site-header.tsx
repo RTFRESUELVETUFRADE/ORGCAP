@@ -12,20 +12,18 @@ export function SiteHeader() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-navy-900/5 bg-cream-50/90 backdrop-blur">
+    <header className="sticky top-0 z-50 bg-blue-900">
       <Container className="flex h-18 items-center justify-between py-3">
         <Link href="/" className="flex items-center gap-2.5" onClick={() => setOpen(false)}>
           <Image
-            src="/images/brand/logo-navy.png"
+            src="/images/brand/icon-white.png"
             alt="ORGCAP"
             width={40}
             height={40}
             className="h-9 w-9"
             priority
           />
-          <span className="font-serif text-lg font-semibold tracking-tight text-navy-950">
-            ORGCAP
-          </span>
+          <span className="text-lg font-semibold tracking-tight text-white">ORGCAP</span>
         </Link>
 
         <nav className="hidden items-center gap-1 md:flex">
@@ -36,9 +34,7 @@ export function SiteHeader() {
                 key={item.href}
                 href={item.href}
                 className={`rounded-full px-4 py-2 text-sm font-medium transition-colors ${
-                  active
-                    ? "bg-navy-900 text-cream-50"
-                    : "text-navy-900/80 hover:bg-navy-900/5 hover:text-navy-950"
+                  active ? "bg-white text-blue-900" : "text-white/85 hover:bg-white/10 hover:text-white"
                 }`}
               >
                 {item.label}
@@ -49,7 +45,7 @@ export function SiteHeader() {
 
         <Link
           href="/contacto"
-          className="hidden rounded-full bg-amber-500 px-5 py-2.5 text-sm font-semibold text-navy-950 shadow-sm transition-colors hover:bg-amber-400 md:inline-block"
+          className="hidden rounded-full bg-white px-5 py-2.5 text-sm font-semibold text-blue-900 shadow-sm transition-colors hover:bg-blue-50 md:inline-block"
         >
           Conversemos
         </Link>
@@ -57,7 +53,7 @@ export function SiteHeader() {
         <button
           type="button"
           onClick={() => setOpen((v) => !v)}
-          className="inline-flex h-10 w-10 items-center justify-center rounded-full text-navy-950 md:hidden"
+          className="inline-flex h-10 w-10 items-center justify-center rounded-full text-white md:hidden"
           aria-label="Abrir menú"
           aria-expanded={open}
         >
@@ -72,14 +68,14 @@ export function SiteHeader() {
       </Container>
 
       {open && (
-        <div className="border-t border-navy-900/5 bg-cream-50 md:hidden">
-          <Container className="flex flex-col gap-1 py-3">
+        <div className="bg-blue-900 md:hidden">
+          <Container className="flex flex-col gap-1 pb-4">
             {nav.map((item) => (
               <Link
                 key={item.href}
                 href={item.href}
                 onClick={() => setOpen(false)}
-                className="rounded-lg px-3 py-2.5 text-base font-medium text-navy-900 hover:bg-navy-900/5"
+                className="rounded-lg px-3 py-2.5 text-base font-medium text-white/90 hover:bg-white/10"
               >
                 {item.label}
               </Link>
@@ -87,7 +83,7 @@ export function SiteHeader() {
             <Link
               href="/contacto"
               onClick={() => setOpen(false)}
-              className="mt-2 rounded-full bg-amber-500 px-4 py-2.5 text-center text-base font-semibold text-navy-950"
+              className="mt-2 rounded-full bg-white px-4 py-2.5 text-center text-base font-semibold text-blue-900"
             >
               Conversemos
             </Link>

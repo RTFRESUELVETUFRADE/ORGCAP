@@ -14,49 +14,64 @@ export default function ContactoPage() {
     <section className="py-16 sm:py-20">
       <Container className="grid gap-12 lg:grid-cols-[1.1fr_0.9fr]">
         <div>
-          <span className="text-sm font-semibold uppercase tracking-wide text-amber-600">Contacto</span>
-          <h1 className="mt-3 font-serif text-4xl leading-tight tracking-tight text-navy-950 sm:text-5xl">
+          <h1 className="text-4xl font-semibold leading-tight tracking-tight text-blue-950 sm:text-5xl">
             Conversemos de tu equipo
           </h1>
-          <p className="mt-5 max-w-lg text-lg leading-relaxed text-navy-900/70">
+          <p className="mt-5 max-w-lg text-lg leading-relaxed text-slate-600">
             Cuéntanos tu contexto, tu sector y lo que necesitas fortalecer. Te respondemos
             directamente, sin formularios eternos ni respuestas automáticas genéricas.
           </p>
 
-          <div className="mt-10 rounded-[1.75rem] bg-cream-50 p-6 shadow-sm ring-1 ring-navy-900/5 sm:p-8">
+          <div className="mt-10 rounded-2xl bg-white p-6 shadow-sm ring-1 ring-slate-200 sm:p-8">
             <ContactForm />
           </div>
         </div>
 
         <div className="space-y-6">
-          <div className="relative aspect-[4/3] overflow-hidden rounded-[1.75rem]">
+          <div className="relative aspect-[4/3] overflow-hidden rounded-2xl">
             <Image
-              src="/images/contact/contacto-jardin.jpg"
-              alt="Silla de descanso en un jardín, reflejando un espacio de conversación tranquila"
+              src="/images/sml/sml-tecnicos-grupo.jpg"
+              alt="Equipo de ORGCAP y participantes conversando durante una jornada de capacitación"
               fill
               sizes="(min-width: 1024px) 24rem, 90vw"
               className="object-cover"
             />
           </div>
 
-          <div className="rounded-[1.75rem] bg-navy-950 p-7 text-cream-50">
-            <h2 className="font-serif text-xl">Información de contacto</h2>
+          <div className="rounded-2xl bg-blue-950 p-7 text-white">
+            <h2 className="text-xl font-semibold">Información de contacto</h2>
             <ul className="mt-5 space-y-4 text-sm">
               <li>
-                <span className="block text-cream-50/50">Correo</span>
-                <a href={`mailto:${site.email}`} className="font-medium hover:text-amber-400">
+                <span className="block text-white/50">Teléfono</span>
+                <a href={`tel:${site.phone.replace(/\s+/g, "")}`} className="font-medium hover:text-blue-200">
+                  {site.phone}
+                </a>
+              </li>
+              <li>
+                <span className="block text-white/50">Correo</span>
+                <a href={`mailto:${site.email}`} className="font-medium hover:text-blue-200">
                   {site.email}
                 </a>
               </li>
               <li>
-                <span className="block text-cream-50/50">Instagram</span>
+                <span className="block text-white/50">Dirección</span>
+                <span className="font-medium">{site.address}</span>
+              </li>
+              <li>
+                <span className="block text-white/50">Instagram</span>
                 <a
                   href={site.instagram}
                   target="_blank"
                   rel="noreferrer"
-                  className="font-medium hover:text-amber-400"
+                  className="font-medium hover:text-blue-200"
                 >
                   {site.instagramHandle}
+                </a>
+              </li>
+              <li>
+                <span className="block text-white/50">Facebook</span>
+                <a href={site.facebook} target="_blank" rel="noreferrer" className="font-medium hover:text-blue-200">
+                  {site.facebookHandle}
                 </a>
               </li>
             </ul>
