@@ -54,6 +54,9 @@ export type Sector = {
   needs: string[];
   image: string;
   imageAlt: string;
+  /** Optional override used only on the Servicios page detail section. */
+  servicesImage?: string;
+  servicesImageAlt?: string;
 };
 
 export const sectors: Sector[] = [
@@ -82,8 +85,10 @@ export const sectors: Sector[] = [
       "Gestión del cambio, motivación y trabajo en equipo",
       "Clima organizacional y equipos de alto rendimiento",
     ],
-    image: "/images/sectors/empresas.jpg",
-    imageAlt: "Equipo de trabajo celebrando al aire libre, saltando de alegría",
+    image: "/images/sectors/empresas-inicio.jpg",
+    imageAlt: "Directorio ejecutivo reunido en torno a una mesa de trabajo",
+    servicesImage: "/images/sectors/empresas-servicios.jpg",
+    servicesImageAlt: "Equipo ejecutivo revisando documentos e informes en una sala de reuniones",
   },
   {
     slug: "mineria",

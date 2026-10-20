@@ -42,8 +42,8 @@ export default function ServiciosPage() {
             >
               <div className="relative aspect-[4/3] overflow-hidden rounded-2xl">
                 <Image
-                  src={sector.image}
-                  alt={sector.imageAlt}
+                  src={sector.servicesImage ?? sector.image}
+                  alt={sector.servicesImageAlt ?? sector.imageAlt}
                   fill
                   sizes="(min-width: 1024px) 32rem, 90vw"
                   className="object-cover"
