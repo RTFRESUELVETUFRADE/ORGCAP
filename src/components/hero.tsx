@@ -42,7 +42,7 @@ const slides: Slide[] = [
     // The taekwondo group photo is a tall portrait crop; a plain center crop
     // cuts through people's faces, so the focal point is pulled up to where
     // they actually are instead of the image's vertical middle.
-    imagePosition: program.slug === "alto-rendimiento" ? "50% 28%" : undefined,
+    imagePosition: program.slug === "alto-rendimiento" ? "50% 40%" : undefined,
   })),
 ];
 
