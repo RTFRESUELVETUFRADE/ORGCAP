@@ -61,8 +61,8 @@ export function SiteFooter() {
             <ul className="mt-4 space-y-3 text-[15px] text-white">
               <li className="flex items-center gap-3">
                 <PhoneIcon />
-                <a href={`tel:${site.phone.replace(/\s+/g, "")}`} className="hover:text-blue-100">
-                  {site.phone}
+                <a href={site.whatsapp} target="_blank" rel="noreferrer" className="hover:text-blue-100">
+                  {site.phone} (WhatsApp)
                 </a>
               </li>
               <li className="flex items-center gap-3">
@@ -83,7 +83,7 @@ export function SiteFooter() {
       <div className="bg-blue-900">
         <Container className="flex flex-col items-center justify-between gap-2 py-5 text-xs text-white/55 sm:flex-row">
           <p>
-            © {currentYear} {site.fullName}. Todos los derechos reservados.
+            © {currentYear} {site.legalName} ({site.fullName}) · RUT {site.rut}. Todos los derechos reservados.
           </p>
           <p className="flex gap-4">
             <Link href="/nosotros" className="hover:text-white">

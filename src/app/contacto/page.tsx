@@ -42,8 +42,8 @@ export default function ContactoPage() {
             <h2 className="text-xl font-semibold">Información de contacto</h2>
             <ul className="mt-5 space-y-4 text-sm">
               <li>
-                <span className="block text-white/50">Teléfono</span>
-                <a href={`tel:${site.phone.replace(/\s+/g, "")}`} className="font-medium hover:text-blue-200">
+                <span className="block text-white/50">WhatsApp</span>
+                <a href={site.whatsapp} target="_blank" rel="noreferrer" className="font-medium hover:text-blue-200">
                   {site.phone}
                 </a>
               </li>

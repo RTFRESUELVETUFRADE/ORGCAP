@@ -5,8 +5,7 @@ import { notFound } from "next/navigation";
 import { Container } from "@/components/container";
 import { CtaBand } from "@/components/cta-band";
 import { blogPosts } from "@/lib/content";
-
-const dateFormatter = new Intl.DateTimeFormat("es-CL", { day: "numeric", month: "long", year: "numeric" });
+import { formatDate } from "@/lib/date";
 
 export function generateStaticParams() {
   return blogPosts.map((post) => ({ slug: post.slug }));
@@ -41,7 +40,7 @@ export default async function BlogPostPage(props: PageProps<"/blog/[slug]">) {
             {post.title}
           </h1>
           <time dateTime={post.date} className="mt-2 block text-sm font-medium text-slate-500">
-            {dateFormatter.format(new Date(post.date))}
+            {formatDate(post.date)}
           </time>
 
           <div className="relative mt-8 aspect-[16/9] overflow-hidden rounded-2xl">

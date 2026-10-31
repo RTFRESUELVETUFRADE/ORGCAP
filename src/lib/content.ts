@@ -6,13 +6,30 @@ export const site = {
     "OTEC chilena especializada en educación, empresas y minería. Diseñamos capacitaciones a la medida de cada equipo, con foco en el bienestar y el desempeño real de las personas.",
   url: "https://www.orgcap.cl",
   email: "orgcap@orgcap.cl",
-  phone: "+56 9 8218 6901",
-  address: "Av. Kennedy 6800, of. 318, Vitacura, Santiago, Chile",
+  phone: "+56 9 9872 9014",
+  whatsapp: "https://wa.me/56998729014",
+  address: "Av. Pdte. Kennedy 6800, of. 318, Torre B, Vitacura, Santiago, Chile",
+  legalName: "Organismo Chileno de Formación y Capacitación Laboral SpA",
+  rut: "77.711.403-4",
   instagram: "https://www.instagram.com/orgcapcl",
   instagramHandle: "@orgcapcl",
   facebook: "https://www.facebook.com/ORGCAPOTEC",
   facebookHandle: "ORGCAP OTEC",
   youtube: "https://www.youtube.com/@ORGCAP",
+};
+
+export const certificate = {
+  title: "Certificación NCh 2728:2015",
+  issuer: "Confidence Certification Ltda.",
+  accreditation: "Sistema Nacional de Acreditación — INN Chile (Acreditación SC 054)",
+  scope:
+    "Diseño, comercialización y prestación de servicios de capacitación en las áreas de: Administración, Salud, nutrición y dietética en modalidad presencial y a distancia para el sector público, privado y personas naturales.",
+  certificateNumber: "CC-059-2024",
+  registryNumber: "A-10788",
+  issuedAt: "2023-03-27",
+  renewalStart: "2026-03-27",
+  expiresAt: "2029-03-26",
+  pdfPath: "/certificado-otec-nch-2728.pdf",
 };
 
 export const hero = {
@@ -157,6 +174,64 @@ export const homeValues: Value[] = [
   },
 ];
 
+export type Program = {
+  slug: string;
+  name: string;
+  tagline: string;
+  audience: string;
+  description: string;
+  benefits: string[];
+  image: string;
+  imageAlt: string;
+  heroHeadline: string;
+  heroLead: string;
+  heroImage: string;
+  heroImageAlt: string;
+};
+
+export const programs: Program[] = [
+  {
+    slug: "alto-rendimiento",
+    name: "Comunicación Neuroefectiva: Logra Alto Rendimiento",
+    tagline: "Seminario para equipos y deportistas de alto rendimiento",
+    audience: "Clubes, selecciones, academias deportivas y equipos que compiten bajo presión",
+    description:
+      "Un seminario que conecta la neurociencia de la emoción con el desempeño deportivo. Trabajamos cómo las emociones reprimidas se manifiestan en el cuerpo —afectando el rendimiento y favoreciendo lesiones— y cómo entrenar el estado emocional con la misma disciplina que se entrena el cuerpo. El objetivo: que deportistas, entrenadores y cuerpos técnicos puedan sostener concentración y claridad mental en el momento que más importa, la competencia.",
+    benefits: [
+      "Mejora la concentración y el enfoque",
+      "Reduce la ansiedad y el estrés precompetitivo",
+      "Favorece la cohesión de equipo",
+    ],
+    image: "/images/programs/alto-rendimiento-servicios.jpg",
+    imageAlt: "Equipo de taekwondo junto a sus entrenadores celebrando una competencia con medallas",
+    heroHeadline: "Comunica mejor. Piensa claro. Rinde más.",
+    heroLead:
+      "Seminario de Comunicación Neuroefectiva para equipos y deportistas de alto rendimiento: entrenamos la emoción con la misma disciplina con la que se entrena el cuerpo.",
+    heroImage: "/images/programs/alto-rendimiento-hero.jpg",
+    heroImageAlt: "Equipo de taekwondo junto a sus entrenadores celebrando una competencia con medallas",
+  },
+  {
+    slug: "bienestar-aula",
+    name: "Manejo del Estrés y Bienestar en el Aula",
+    tagline: "Comunicación consciente para equipos docentes",
+    audience: "Profesores, asistentes de la educación y equipos directivos de establecimientos educacionales",
+    description:
+      "Un taller experiencial de comunicación consciente para equipos docentes, basado en herramientas de Programación Neurolingüística: centramiento y presencia plena antes de entrar a la sala, lectura de sistemas representacionales (visual, auditivo, kinestésico) para comunicarse mejor con distintos estudiantes, y acompasamiento para generar climas de confianza. Cierra con la construcción de objetivos propios —personales y de aula— bajo las Condiciones de la Buena Forma, para que cada docente salga con un plan concreto, no solo con una buena intención.",
+    benefits: [
+      "Herramientas de autorregulación y presencia antes y durante la clase",
+      "Comunicación más efectiva con estudiantes, colegas y apoderados",
+      "Un plan de acción personal construido durante el propio taller",
+    ],
+    image: "/images/programs/bienestar-aula-servicios.jpg",
+    imageAlt: "Grupo de docentes participando de pie en un ejercicio de centramiento con los ojos cerrados",
+    heroHeadline: "Comunicación consciente para sostener la sala de clases",
+    heroLead:
+      "Taller de manejo del estrés y bienestar en el aula: herramientas de comunicación consciente y PNL para que los equipos docentes lleguen a clases con más presencia y menos desgaste.",
+    heroImage: "/images/programs/bienestar-aula-hero.jpg",
+    heroImageAlt: "Grupo numeroso de profesores sentados en semicírculo durante una jornada de capacitación",
+  },
+];
+
 export const methodologies = [
   "Comunicación Neuroefectiva",
   "Gestión neuroemocional del estrés y autorregulación",
@@ -194,6 +269,7 @@ export type TeamMember = {
   summary: string;
   bio: string[];
   image: string;
+  linkedin: string;
 };
 
 export const team: TeamMember[] = [
@@ -208,6 +284,7 @@ export const team: TeamMember[] = [
       "Su propuesta de valor combina liderazgo con sentido humano, visión estratégica de negocio y una mirada integral de la formación y el acompañamiento de equipos.",
     ],
     image: "/images/team/manuel-octavio-diaz.jpg",
+    linkedin: "https://www.linkedin.com/in/manuel-octavio-diaz-campos-91b96a61/",
   },
   {
     slug: "aida-cristi-cortes",
@@ -220,6 +297,7 @@ export const team: TeamMember[] = [
       "Ha formado a cientos de biomentores y bioterapeutas neuroemocionales, guiando a miles de personas en procesos de liderazgo y coherencia emocional.",
     ],
     image: "/images/team/aida-cristi-cortes.jpg",
+    linkedin: "https://www.linkedin.com/in/aidacristicortes/",
   },
   {
     slug: "tatiana-dinamarca",
@@ -232,6 +310,7 @@ export const team: TeamMember[] = [
       "Hoy es mentora en capacitaciones de emprendimiento y consultora en estructuración financiera y patrimonios.",
     ],
     image: "/images/team/tatiana-dinamarca.jpg",
+    linkedin: "https://www.linkedin.com/in/tatiana-dinamarca/",
   },
 ];
 
@@ -251,11 +330,6 @@ export const about = {
     "ORGCAP Capacitación Profesional es una organización chilena nacida en 2025, especializada en capacitación y desarrollo de personas, equipos y organizaciones. Operamos comunicacionalmente como un Organismo Técnico de Capacitación (OTEC): no impartimos cursos aislados, buscamos comprender las necesidades de cada institución, diseñar respuestas pertinentes y entregar herramientas aplicables al desempeño cotidiano.",
   focus:
     "Para nosotros, el aprendizaje tiene valor cuando puede trasladarse a la práctica. Articulamos contenidos técnicos y habilidades humanas, combinando formación, reflexión, ejercicios aplicados y planes de acción.",
-};
-
-export const actos = {
-  title: "ACTOS: una iniciativa de posicionamiento en desarrollo",
-  body: "ACTOS (Actualización, Competencias, Tendencias, Oportunidades y Soluciones) es una iniciativa que hemos planificado para conectar a ORGCAP con públicos de nuestros tres sectores estratégicos, con jornadas sobre prevención y buen trato, Comunicación Neuroefectiva y autocuidado institucional. Es una iniciativa en etapa de planificación: todavía no podemos confirmar aquí una fecha ni un alcance definitivo, y preferimos no anunciarla hasta tenerla cerrada.",
 };
 
 export const blogPosts = [
@@ -304,11 +378,11 @@ export const blogPosts = [
 export const youtubeVideos = [
   {
     id: "tu7A1Gi2-i4",
-    title: "Jornada de capacitación: Gestión de las Emociones con Perspectiva Neurocientífica",
+    title: "Gestión de las Emociones con Perspectiva Neurocientífica",
   },
-  { id: "fIkEOm-gj4s", title: "Biomentor Neuroemocional" },
-  { id: "WfJg_LzcG-c", title: "Testimonio — Terapia Grupal (Santiago, Chile)" },
-  { id: "pbR8IeqNfKQ", title: "Biogestor Emocional para Educadores" },
-  { id: "xTXnmkZC9_0", title: "Todos Estamos Contigo — Experiencias que Sostienen" },
-  { id: "q4vX4uHgkb8", title: "Encontrando el Propósito en la Vida" },
+  { id: "KQPL11o0kpI", title: "Biomentor Neuroemocional" },
+  { id: "WfJg_LzcG-c", title: "Testimonios Constelaciones" },
+  { id: "pbR8IeqNfKQ", title: "Biogestor Educadores" },
+  { id: "xTXnmkZC9_0", title: "Todos Estamos Contigo (No Más Bullying)" },
+  { id: "q4vX4uHgkb8", title: "Encontrando tu Propósito en la Vida" },
 ];

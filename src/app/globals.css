@@ -65,6 +65,13 @@ body {
 
 html {
   scrollbar-color: var(--color-blue-400) var(--color-slate-100);
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
 }
 
 ::-webkit-scrollbar {

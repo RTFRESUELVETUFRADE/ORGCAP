@@ -3,7 +3,7 @@ import Image from "next/image";
 import { Container } from "@/components/container";
 import { SectionHeading } from "@/components/section-heading";
 import { CtaBand } from "@/components/cta-band";
-import { sectors, methodologies, ppdu, processSteps } from "@/lib/content";
+import { sectors, methodologies, ppdu, processSteps, programs } from "@/lib/content";
 
 export const metadata: Metadata = {
   title: "Servicios",
@@ -58,6 +58,55 @@ export default function ServiciosPage() {
                     <li key={need} className="flex gap-3 text-sm leading-relaxed text-slate-700">
                       <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-blue-500" />
                       {need}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </Container>
+        </section>
+      ))}
+
+      <section className="py-16 sm:py-20">
+        <Container>
+          <SectionHeading
+            title="Seminarios y talleres destacados"
+            description="Programas que diseñamos para un desafío específico y que hoy ofrecemos como formación propia, con los mismos equipos y contenidos que usamos en terreno."
+          />
+        </Container>
+      </section>
+
+      {programs.map((program, i) => (
+        <section
+          key={program.slug}
+          id={program.slug}
+          className={`scroll-mt-24 pb-16 sm:pb-20 ${i % 2 === 1 ? "bg-slate-50 py-16 sm:py-20" : ""}`}
+        >
+          <Container>
+            <div
+              className={`grid items-center gap-10 lg:grid-cols-2 ${
+                i % 2 === 1 ? "lg:[&>*:first-child]:order-2" : ""
+              }`}
+            >
+              <div className="relative aspect-[4/3] overflow-hidden rounded-2xl">
+                <Image
+                  src={program.image}
+                  alt={program.imageAlt}
+                  fill
+                  sizes="(min-width: 1024px) 32rem, 90vw"
+                  className="object-cover"
+                />
+              </div>
+              <div>
+                <h3 className="text-3xl font-semibold text-blue-950">{program.name}</h3>
+                <p className="mt-2 text-lg font-medium text-blue-600">{program.tagline}</p>
+                <p className="mt-1 text-sm font-medium text-slate-500">Dirigido a: {program.audience}</p>
+                <p className="mt-4 text-base leading-relaxed text-slate-600">{program.description}</p>
+                <ul className="mt-6 space-y-2.5">
+                  {program.benefits.map((benefit) => (
+                    <li key={benefit} className="flex gap-3 text-sm leading-relaxed text-slate-700">
+                      <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-blue-500" />
+                      {benefit}
                     </li>
                   ))}
                 </ul>

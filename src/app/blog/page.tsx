@@ -3,13 +3,12 @@ import Image from "next/image";
 import Link from "next/link";
 import { Container } from "@/components/container";
 import { blogPosts } from "@/lib/content";
+import { formatDate } from "@/lib/date";
 
 export const metadata: Metadata = {
   title: "Blog",
   description: "Notas de ORGCAP sobre capacitación, bienestar emocional y liderazgo en educación, empresas y minería.",
 };
-
-const dateFormatter = new Intl.DateTimeFormat("es-CL", { day: "numeric", month: "long", year: "numeric" });
 
 export default function BlogPage() {
   return (
@@ -42,7 +41,7 @@ export default function BlogPage() {
               <div className="flex flex-1 flex-col p-6">
                 <h2 className="text-lg font-semibold leading-snug text-blue-950">{post.title}</h2>
                 <time dateTime={post.date} className="mt-1.5 block text-xs font-medium text-slate-400">
-                  {dateFormatter.format(new Date(post.date))}
+                  {formatDate(post.date)}
                 </time>
                 <p className="mt-3 flex-1 text-sm leading-relaxed text-slate-600">{post.excerpt}</p>
                 <span className="mt-4 text-sm font-semibold text-blue-700 group-hover:text-blue-600">
