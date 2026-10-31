@@ -204,7 +204,7 @@ export const programs: Program[] = [
     ],
     image: "/images/programs/alto-rendimiento-servicios.jpg",
     imageAlt: "Equipo de taekwondo junto a sus entrenadores celebrando una competencia con medallas",
-    heroHeadline: "Comunica mejor. Piensa claro. Rinde más.",
+    heroHeadline: "Comunica mejor.\nPiensa claro.\nRinde más.",
     heroLead:
       "Seminario de Comunicación Neuroefectiva para equipos y deportistas de alto rendimiento: entrenamos la emoción con la misma disciplina con la que se entrena el cuerpo.",
     heroImage: "/images/programs/alto-rendimiento-hero.jpg",

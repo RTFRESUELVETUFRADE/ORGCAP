@@ -92,3 +92,13 @@ html {
   outline: 2px solid var(--color-blue-600);
   outline-offset: 2px;
 }
+
+/* Hero carousel track: scroll-snap drives the paging, the scrollbar is noise */
+.no-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
